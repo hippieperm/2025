@@ -1,0 +1,1 @@
+ /Volumes/2T2T/x_code/2025/.dart_tool/flutter_build/88551c41bafb80846df568856408a325/native_assets.yaml: 
