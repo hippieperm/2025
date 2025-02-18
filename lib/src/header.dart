@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class Header extends StatelessWidget {
   Header({super.key});
 
+  int score = 1;
+  int tryCount = 0;
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -13,7 +16,7 @@ class Header extends StatelessWidget {
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'score',
                 style: TextStyle(
                   fontSize: 20,
@@ -23,8 +26,8 @@ class Header extends StatelessWidget {
                   height: 0,
                 ),
               ),
-              Text('0',
-                  style: TextStyle(
+              Text(score.toString(),
+                  style: const TextStyle(
                       height: 0,
                       fontSize: 30,
                       letterSpacing: -2,
@@ -32,7 +35,7 @@ class Header extends StatelessWidget {
                       color: Colors.black)),
             ],
           )),
-          Expanded(
+          const Expanded(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -57,12 +60,12 @@ class Header extends StatelessWidget {
           )),
           Expanded(
             child: Container(
-              margin: EdgeInsets.only(top: 10, bottom: 10, left: 20),
+              margin: const EdgeInsets.only(top: 10, bottom: 10, left: 20),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(6),
-                color: Color(0xff94BEE5),
+                color: const Color(0xff94BEE5),
               ),
-              child: Center(child: Text('새 게임')),
+              child: const Center(child: Text('새 게임')),
             ),
           ),
         ],

@@ -4,7 +4,7 @@ class CardWidget extends StatelessWidget {
   final bool isFlipped;
   final int cardNumber;
   final Function()? onTap;
-  CardWidget({
+  const CardWidget({
     super.key,
     this.isFlipped = false,
     this.cardNumber = 1,
@@ -28,7 +28,7 @@ class CardWidget extends StatelessWidget {
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.2),
-              offset: Offset(0, 2),
+              offset: const Offset(0, 2),
               blurRadius: 4,
             ),
           ],
@@ -38,10 +38,10 @@ class CardWidget extends StatelessWidget {
                 child: Image.asset('assets/images/$cardNumber.png'),
               )
             : Container(
-                margin: EdgeInsets.all(8),
+                margin: const EdgeInsets.all(8),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: Color(0xffBBD0E3),
+                  color: const Color(0xffBBD0E3),
                 ),
                 child: Center(child: Image.asset('assets/images/logo.png'))),
       ),

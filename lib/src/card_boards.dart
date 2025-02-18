@@ -7,7 +7,7 @@ class CardBoards extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
+    return const SingleChildScrollView(
       child: Wrap(
         spacing: 4,
         runSpacing: 4,
