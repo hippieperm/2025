@@ -14,14 +14,14 @@ class Home extends StatelessWidget {
         title: const Text('짝맞추기 게임'),
         backgroundColor: const Color(0xff92CBFF),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(20.0),
+      body: const Padding(
+        padding: EdgeInsets.all(20.0),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Header(),
-            const SizedBox(height: 20),
-            const Expanded(child: CardBoards()),
+            SizedBox(height: 20),
+            Expanded(child: CardBoards()), 
           ],
         ),
       ),
