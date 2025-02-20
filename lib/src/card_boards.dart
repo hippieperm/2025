@@ -5,7 +5,7 @@ import 'card.dart';
 class CardBoards extends StatelessWidget {
   CardBoards({super.key});
 
-  List<int> cards = [];
+  List<int> cards = [1, 5, 2, 6, 3, 4, 3, 2, 6, 1, 4, 5];
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,10 @@ class CardBoards extends StatelessWidget {
         spacing: 4,
         runSpacing: 4,
         children: [
-          for (var i = 0; i < 12; i++)  CardWidget(),
+          for (var i = 0; i < cards.length; i++)
+            CardWidget(
+              cardNumber: cards[i],
+            ),
         ],
       ),
     );
