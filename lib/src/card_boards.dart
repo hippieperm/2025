@@ -3,27 +3,18 @@ import 'package:flutter/material.dart';
 import 'card.dart';
 
 class CardBoards extends StatelessWidget {
-  const CardBoards({super.key});
+  CardBoards({super.key});
+
+  List<int> cards = [];
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Wrap(
         spacing: 4,
         runSpacing: 4,
         children: [
-          CardWidget(),
-          CardWidget(),
-          CardWidget(),
-          CardWidget(isFlipped: false),
-          CardWidget(),
-          CardWidget(),
-          CardWidget(),
-          CardWidget(),
-          CardWidget(isFlipped: false),
-          CardWidget(),
-          CardWidget(),
-          CardWidget(),
+          for (var i = 0; i < 12; i++)  CardWidget(),
         ],
       ),
     );

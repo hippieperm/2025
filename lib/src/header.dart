@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
-  const Header({super.key});
+  Header({super.key});
 
-  final int score = 100;
-  final int tryCount = 0;
+  int score = 100;
+  int tryCount = 10;
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +35,11 @@ class Header extends StatelessWidget {
                       color: Colors.black)),
             ],
           )),
-          const Expanded(
+          Expanded(
               child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
+              const Text(
                 'try count',
                 style: TextStyle(
                   fontSize: 20,
@@ -49,8 +49,8 @@ class Header extends StatelessWidget {
                   height: 0,
                 ),
               ),
-              Text('0',
-                  style: TextStyle(
+              Text('$tryCount',
+                  style: const TextStyle(
                       height: 0,
                       fontSize: 30,
                       letterSpacing: -2,
