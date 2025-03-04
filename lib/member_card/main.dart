@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:hard_study_2025/member_card/models/developer.dart';
 import 'models/member.dart';
 import 'widgets/member_card.dart';
+import 'widgets/developer_card.dart';
 
 void main() {
   runApp(const App());
@@ -50,6 +52,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final PageController _pageController = PageController();
   int _currentPage = 0;
+  final int totalPages = members.length + 1; // 멤버 + 개발자 카드
 
   @override
   void dispose() {
@@ -164,13 +167,16 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             child: PageView.builder(
               controller: _pageController,
-              itemCount: members.length,
+              itemCount: totalPages,
               onPageChanged: (int page) {
                 setState(() {
                   _currentPage = page;
                 });
               },
               itemBuilder: (context, index) {
+                if (index == members.length) {
+                  return DeveloperCard(developer: developer);
+                }
                 return MemberCard(member: members[index]);
               },
             ),
@@ -203,7 +209,7 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Row(
                   children: List.generate(
-                    members.length,
+                    totalPages,
                     (index) => Container(
                       width: 8,
                       height: 8,
@@ -218,7 +224,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 ElevatedButton(
-                  onPressed: _currentPage < members.length - 1
+                  onPressed: _currentPage < totalPages - 1
                       ? () => _goToPage(_currentPage + 1)
                       : null,
                   style: ElevatedButton.styleFrom(
