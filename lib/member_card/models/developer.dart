@@ -22,8 +22,8 @@ final developer = Developer(
   role: '1조 발표',
   description: '''
     지금까지 1조의 발표였습니다.
-    팀원소개 앱개발을 한 이인혁이었습니다.
-    경청해주셔서 감사합니다 🙇‍♂️
+    팀원 소개 앱 개발을 한 이인혁이었습니다.
+    경청해 주셔서 감사합니다 🙇‍♂️
     ''',
   skills: [
     'Flutter & Dart',
