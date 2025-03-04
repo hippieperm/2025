@@ -15,7 +15,7 @@ class Member {
 final List<Member> members = [
   Member(
     name: '유제형',
-    imageUrl: 'assets/images/jaeh.png',
+    imageUrl: 'assets/images/jaehh.png',
     description: '''
 💁🏻‍♂️자기소개
 • 스포츠심리학 석사를 졸업했어요
@@ -99,7 +99,7 @@ final List<Member> members = [
   Member(
     name: '김영우',
     imageUrl: 'assets/images/member4.png',
-    description: '모바일 앱 개발 전문가로, 크로스 플랫폼 개발을 담당합니다.',
+    description: '''''',
     role: '팀원',
   ),
   Member(
