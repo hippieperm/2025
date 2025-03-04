@@ -122,9 +122,10 @@ class _HomePageState extends State<HomePage> {
               ),
               const SizedBox(height: 8),
               Text(
-                '플러터 개발자(진)',
+                '1조였습니다 감사합니다!',
                 style: TextStyle(
                   fontSize: 16,
+                  fontWeight: FontWeight.bold,
                   color:
                       isDarkMode ? const Color(0xFFAEAEB2) : Colors.grey[600],
                 ),

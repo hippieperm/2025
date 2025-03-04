@@ -24,9 +24,9 @@ final List<Member> members = [
     imageUrl: 'assets/images/in_hyuk.JPG',
     description: '''
     👋 자기소개
-    • 자기소개 앱 개발을 맡은 플러터 개발자 이인혁입니다
-    • 00년생, 새로운 기술에 관심이 많습니다
-    • 사용자 경험을 중요하게 생각하는 개발자입니다
+    • 자기소개 앱 개발을 맡은 플러터 개발자 이인혁입니다.
+    • 00년생, 새로운 기술에 관심이 많습니다!
+    • 사용자 경험을 중요하게 생각하는 개발자입니다!
     
     💻 개발 스킬
     • Flutter & Dart
@@ -44,7 +44,7 @@ final List<Member> members = [
     • 음악 감상
     • POSCA로 아트 작업
 
-    📫 연락처
+    🔗 개발자 채널
     • 𝗚𝗶𝘁𝗛𝘂𝗯  ⟶  github.com/hippieperm
     • 𝗕𝗹𝗼𝗴    ⟶  velog.io/@hippieperm
     • 𝗘𝗺𝗮𝗶𝗹   ⟶  xoxockstar@gmail.com
