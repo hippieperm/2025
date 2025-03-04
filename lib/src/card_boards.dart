@@ -31,6 +31,7 @@ class _CardBoardsState extends State<CardBoards> {
 
   void onTapCard(int cardIndex) {
     print('$cardIndex 번째 카드를 선택하셨습니다.');
+
     if (instantFirstCard == -1) {
       instantFirstCard = cardIndex;
     } else {
@@ -40,6 +41,15 @@ class _CardBoardsState extends State<CardBoards> {
 
       if (firstCard == secondCard) {
         print('짝이 맞았습니다.');
+        instantFirstCard = -1; // 추가
+      } else {
+        setState(() {
+          cardsFlippedState[instantFirstCard] = false;
+          cardsFlippedState[cardIndex] = false;
+        });
+
+        instantFirstCard = -1; // 추가
+        return;
       }
     }
     setState(() {
