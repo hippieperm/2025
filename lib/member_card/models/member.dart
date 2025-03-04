@@ -15,8 +15,26 @@ class Member {
 final List<Member> members = [
   Member(
     name: '유제형',
-    imageUrl: 'assets/images/member1.jpg',
-    description: '팀의 리더로서 프로젝트를 이끌고 있습니다. UI/UX 디자인 전문가입니다.',
+    imageUrl: 'assets/images/jaeh.png',
+    description: '''
+💁🏻‍♂️자기소개
+• 스포츠심리학 석사를 졸업했어요
+• 연구소에서 2년정도 일을 했고
+• 개발 경험은 아직 없습니다.
+• MBTI는 ENTJ입니다!
+
+🎮 취미
+• 게임을 좋아하고
+• 영화와 Youtube보는 것도 좋아합니다.
+
+💻 개발 스킬
+• 아직 개발 경험이 없는 왕초보입니다!
+
+😁 하고 싶은 말
+• 팀 프로젝트에서 1인분 할 수 있게 열심히 배우겠습니다.
+• 많이 도와주시면 감사하겠습니다!
+'''
+        .trimLeft(),
     role: '팀 리더',
   ),
   Member(
@@ -25,7 +43,7 @@ final List<Member> members = [
     description: '''
 👋 자기소개
 • 자기소개 앱 개발을 맡은 플러터 개발자 이인혁입니다.
-• 00년생, 새로운 기술에 관심이 많습니다!
+• 00년생, 소프트웨어를 전공했습니다!
 • 사용자 경험을 중요하게 생각하는 개발자입니다!
 
 💻 개발 스킬
@@ -42,7 +60,7 @@ final List<Member> members = [
 ✨ 취미 생활
 • 전시회 관람
 • 음악 감상
-• POSCA로 아트 작업
+• POSCA마카 아트작업
 
 🔗 개발자 채널
 • 𝗚𝗶𝘁𝗛𝘂𝗯  ⟶  github.com/hippieperm
@@ -54,7 +72,7 @@ final List<Member> members = [
   ),
   Member(
     name: '김기현',
-    imageUrl: 'assets/images/member3.jpg',
+    imageUrl: 'assets/images/gh.png',
     description: '''
 💁🏻‍♂️자기소개
 • 게임 개발로 개발을 시작했어요
@@ -80,14 +98,32 @@ final List<Member> members = [
   ),
   Member(
     name: '김영우',
-    imageUrl: 'assets/images/member4.jpg',
+    imageUrl: 'assets/images/member4.png',
     description: '모바일 앱 개발 전문가로, 크로스 플랫폼 개발을 담당합니다.',
     role: '팀원',
   ),
   Member(
     name: '안정희',
-    imageUrl: 'assets/images/member5.jpg',
-    description: 'QA 엔지니어로서 제품의 품질 향상에 기여하고 있습니다.',
+    imageUrl: 'assets/images/jh.png',
+    description: '''
+💁🏻‍♂️자기소개
+• 개발을 한 번도 해본 적 없는 초보자예요
+• 잘 모르지만 열심히 노력해서 따라가겠습니다
+• 많이 물어봐도 좋게 봐주세요..
+• MBTI는 ISFP입니다.
+
+🎮 취미
+• 게임이랑 유튜브 보는것을 좋아해요
+• 산책과 자전거도 좋아합니다
+
+💻 개발 스킬
+• 처음입니다.
+
+😁 하고 싶은 말
+• 처음이라서 잘 모르지만 잘 부탁드립니다.
+• 잘 부탁드립니다!
+'''
+        .trimLeft(),
     role: '팀원',
   ),
 ];
