@@ -38,6 +38,7 @@ final List<Member> members = [
     role: '팀 리더',
   ),
   Member(
+    //블로그 작성예정
     name: '이인혁',
     imageUrl: 'assets/images/in_hyuk.JPG',
     description: '''
