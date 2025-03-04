@@ -82,15 +82,22 @@ class MemberCard extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 8),
-                    Text(
-                      member.description,
-                      style: TextStyle(
-                        fontSize: 16,
-                        color: isDarkMode
-                            ? const Color(0xFFAEAEB2)
-                            : Colors.black87,
-                        height: 1.5,
-                      ),
+                    Row(
+                      children: [
+                        Expanded(
+                          child: Text(
+                            member.description,
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: isDarkMode
+                                  ? const Color(0xFFAEAEB2)
+                                  : Colors.black87,
+                              height: 1.5,
+                            ),
+                            softWrap: true,
+                          ),
+                        ),
+                      ],
                     ),
                   ],
                 ),
