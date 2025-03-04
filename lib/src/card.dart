@@ -43,7 +43,13 @@ class CardWidget extends StatelessWidget {
                   borderRadius: BorderRadius.circular(12),
                   color: const Color(0xffBBD0E3),
                 ),
-                child: Center(child: Image.asset('assets/images/logo.png'))),
+                child: const Center(
+                  child: Icon(
+                    Icons.card_giftcard_rounded,
+                    size: 44,
+                  ),
+                ),
+              ),
       ),
     );
   }
