@@ -3,7 +3,12 @@ import 'package:flutter/material.dart';
 import 'card.dart';
 
 class CardBoards extends StatefulWidget {
-  const CardBoards({super.key});
+  final Function() updateTryCount;
+
+  const CardBoards({
+    super.key,
+    required this.updateTryCount,
+  });
 
   @override
   State<CardBoards> createState() => _CardBoardsState();
@@ -31,18 +36,21 @@ class _CardBoardsState extends State<CardBoards> {
 
   void onTapCard(int cardIndex) {
     print('$cardIndex 번째 카드를 선택하셨습니다.');
+
     if (instantFirstCard == -1) {
       instantFirstCard = cardIndex;
     } else {
       // 두번째 카드가 선택되었을때 로직 추가
+      widget.updateTryCount(); // 추가
+
       var firstCard = cards[instantFirstCard];
       var secondCard = cards[cardIndex];
 
       if (firstCard == secondCard) {
         print('짝이 맞았습니다.');
-        instantFirstCard = -1; // 추가
+        instantFirstCard = -1;
       } else {
-        resetInstantCards(instantFirstCard, cardIndex); // 추가
+        resetInstantCards(instantFirstCard, cardIndex);
       }
     }
     setState(() {
