@@ -97,12 +97,12 @@ final List<Member> members = [
         .trimLeft(),
     role: '팀원',
   ),
-  Member(
-    name: '김영우',
-    imageUrl: 'assets/images/member4.png',
-    description: '''''',
-    role: '팀원',
-  ),
+  // Member(
+  //   name: '김영우',
+  //   imageUrl: 'assets/images/member4.png',
+  //   description: '''''',
+  //   role: '팀원',
+  // ),
   Member(
     name: '안정희',
     imageUrl: 'assets/images/jh.png',
