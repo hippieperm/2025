@@ -3,12 +3,20 @@ import 'package:flutter/material.dart';
 import 'card_boards.dart';
 import 'header.dart';
 
-class Home extends StatelessWidget {
-  int tryCount = 10;
+class Home extends StatefulWidget {
+  const Home({super.key});
+  @override
+  State<Home> createState() => _HomeState();
+}
 
-  Home({super.key}); // 추가
+class _HomeState extends State<Home> {
+  int tryCount = 0;
+
+  // 추가
   void updateTryCount() {
-    print('시도 횟수를 업데이트합니다.');
+    setState(() {
+      tryCount++;
+    });
   }
 
   @override
