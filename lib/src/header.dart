@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 
 class Header extends StatelessWidget {
   final int tryCount;
+  final int addScore;
 
-  Header({
+  const Header({
     super.key,
     this.tryCount = 0,
+    this.addScore = 0,
   });
-
-  int score = 100;
 
   @override
   Widget build(BuildContext context) {
@@ -30,7 +30,7 @@ class Header extends StatelessWidget {
                   height: 0,
                 ),
               ),
-              Text('$score',
+              Text('$addScore',
                   style: const TextStyle(
                       height: 0,
                       fontSize: 30,

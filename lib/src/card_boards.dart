@@ -5,10 +5,12 @@ import 'card.dart';
 
 class CardBoards extends StatefulWidget {
   final Function() updateTryCount;
+  final Function() addScore;
 
   const CardBoards({
     super.key,
     required this.updateTryCount,
+    required this.addScore,
   });
 
   @override
@@ -40,6 +42,7 @@ class _CardBoardsState extends State<CardBoards> {
       var secondCard = cards[cardIndex];
       if (firstCard!.cardValue == secondCard.cardValue) {
         print('짝이 맞았습니다.');
+        widget.addScore();
         instantFirstCard = null;
       } else {
         resetInstantCards(instantFirstCard!, secondCard);

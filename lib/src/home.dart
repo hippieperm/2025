@@ -11,11 +11,18 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   int tryCount = 0;
+  int score = 0;
 
   // 추가
   void updateTryCount() {
     setState(() {
       tryCount++;
+    });
+  }
+
+  void addScore() {
+    setState(() {
+      score += 10;
     });
   }
 
@@ -32,13 +39,17 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            Header(tryCount: tryCount),
+            Header(
+              tryCount: tryCount,
+              addScore: score,
+            ),
             Expanded(
               child: Column(
                 children: [
                   const SizedBox(height: 35),
                   CardBoards(
                     updateTryCount: updateTryCount,
+                    addScore: addScore,
                   ),
                 ],
               ),
