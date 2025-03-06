@@ -10,6 +10,8 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  final GlobalKey<CardBoardsState> _cardBoardsKey =
+      GlobalKey<CardBoardsState>();
   int tryCount = 0;
   int score = 0;
 
@@ -42,12 +44,20 @@ class _HomeState extends State<Home> {
             Header(
               tryCount: tryCount,
               addScore: score,
+              onReset: () {
+                setState(() {
+                  tryCount = 0;
+                  score = 0;
+                });
+                _cardBoardsKey.currentState?.resetCards();
+              },
             ),
             Expanded(
               child: Column(
                 children: [
                   const SizedBox(height: 35),
                   CardBoards(
+                    key: _cardBoardsKey,
                     updateTryCount: updateTryCount,
                     addScore: addScore,
                   ),

@@ -14,10 +14,10 @@ class CardBoards extends StatefulWidget {
   });
 
   @override
-  State<CardBoards> createState() => _CardBoardsState();
+  CardBoardsState createState() => CardBoardsState();
 }
 
-class _CardBoardsState extends State<CardBoards> {
+class CardBoardsState extends State<CardBoards> {
   late List<CardModel> cards;
   @override
   void initState() {
@@ -61,6 +61,17 @@ class _CardBoardsState extends State<CardBoards> {
     });
     instantFirstCard = null;
     return;
+  }
+
+  void resetCards() {
+    setState(() {
+      List<int> cardsValue = [1, 5, 2, 6, 3, 4, 3, 2, 6, 1, 4, 5];
+      cardsValue.shuffle();
+      cards = List.generate(cardsValue.length, (index) {
+        return CardModel(index: index, cardValue: cardsValue[index]);
+      });
+      instantFirstCard = null;
+    });
   }
 
   @override

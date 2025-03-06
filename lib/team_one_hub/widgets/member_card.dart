@@ -75,7 +75,7 @@ class MemberCard extends StatelessWidget {
                               color: isDarkMode
                                   ? Colors.white
                                   : Colors.blue.shade900,
-                              fontWeight: FontWeight.w500,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
                         ),
