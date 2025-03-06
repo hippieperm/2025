@@ -8,4 +8,9 @@ class CardModel {
     required this.cardValue,
     this.isFlipped = false,
   });
+
+  void setFlipped(bool state) {
+    // 추가
+    isFlipped = state;
+  }
 }
