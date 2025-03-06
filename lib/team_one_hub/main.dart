@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hard_study_2025/team_one_portfolio/models/developer.dart';
+import 'package:hard_study_2025/team_one_hub/models/developer.dart';
 import 'models/member.dart';
 import 'widgets/member_card.dart';
 import 'widgets/developer_card.dart';
