@@ -18,11 +18,13 @@ int romanToInt(String input) {
     'D': 500,
     'M': 1000,
   };
+
   for (var i = 0; i < input.length; i++) {
     int currentValue = romanValues[input[i]]!;
+    int nextVal = i + 1 < input.length ? romanValues[input[i + 1]]! : 0;
 
     // 다음문자열이 존재 && 다음문자의 값보다 현재값이 크면 빼기
-    if (i + 1 < input.length && romanValues[input[i + 1]]! > currentValue) {
+    if (currentValue < nextVal) {
       result -= currentValue;
     } else {
       result += currentValue;
