@@ -16,24 +16,18 @@ void main() {
 
     switch (input) {
       case '1':
-        print('\n=== 상품 목록 ===');
-        for (var item in ShoppingMallData.itemList.entries) {
-          var price = ShoppingMallService.formater(item);
-          print('${item.key} / $price원');
-        }
+        ShoppingMallService.showProducts();
         break;
       case '2':
         //TODO: 상품을 장바구니에 담을수 있는 기능
         ShoppingMallService.addToCart();
-
+        break;
       case '3':
         //TODO: 장바구니에 담은 상품의 총가격
-        return;
+        ShoppingMallService.showTotal();
+        break;
       case '4':
         print('이용해 주셔서 감사합니다 ~ 안녕히 가세요 !');
-        break;
-      default:
-        print('잘못된 입력입니다.');
         break;
     }
   }
