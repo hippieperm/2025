@@ -1,6 +1,9 @@
 class ShoppingMallData {
   static int totalPrice = 0;
   static int itemPrice = 0;
+  static String itemName = '';
+
+  static Map<String, int> cart = {};
   static Map<String, int> itemList = {
     '셔츠': 45000,
     '원피스': 30000,
@@ -8,5 +11,4 @@ class ShoppingMallData {
     '반바지': 38000,
     '양말': 5000,
   };
-  static String itemName = '';
 }
