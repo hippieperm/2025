@@ -62,6 +62,22 @@ class ShoppingMallService {
     }
   }
 
+  static void quit() {
+    print('정말 종료하시겠습니까?');
+    if (input() == '5') {
+      print('이용해 주셔서 감사합니다 ~ 안녕히 가세요 !');
+    } else {
+      print('종료하지 않습니다.');
+    }
+  }
+
+  static void cartReset() {
+    if (ShoppingMallData.cart.isEmpty) {
+      print('\n이미 장바구니가 비어있습니다.');
+      return;
+    }
+  }
+
   static String formater(MapEntry<String, int> item) {
     return item.value.toString().replaceAllMapped(
         RegExp(r'(\d{1,3})(?=(\d{3})+(?!\d))'), (Match m) => '${m[1]},');
