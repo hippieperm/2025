@@ -74,8 +74,11 @@ class ShoppingMallService {
   static void cartReset() {
     if (ShoppingMallData.cart.isEmpty) {
       print('\n이미 장바구니가 비어있습니다.');
+
       return;
     }
+    print('장바구니를 초기화합니다.');
+    ShoppingMallData.cart.clear();
   }
 
   static String formater(MapEntry<String, int> item) {
